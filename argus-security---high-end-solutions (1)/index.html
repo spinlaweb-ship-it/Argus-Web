@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARGUS Security | Soluciones Integrales de Alta Gama</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        raisin: '#272727',
+                        firebrick: '#C1121F',
+                        barnred: '#780000',
+                        silver: '#A3A3A3',
+                        platinum: '#E5E5E5',
+                    },
+                    fontFamily: {
+                        sans: ['"Open Sans"', 'sans-serif'],
+                        heading: ['Raleway', 'sans-serif'],
+                    },
+                    clipPath: {
+                        'triangle-tr': 'polygon(0 0, 100% 0, 100% 100%)',
+                        'triangle-bl': 'polygon(0 0, 0 100%, 100% 100%)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .geometric-bg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(193, 18, 31, 0.05) 0%, transparent 100%);
+            clip-path: polygon(100% 0, 0 0, 100% 100%);
+            z-index: 0;
+            pointer-events: none;
+        }
+        .hud-overlay {
+            background: radial-gradient(circle at center, transparent 0%, rgba(39, 39, 39, 0.4) 100%);
+        }
+        .ai-box {
+            border: 1px solid #C1121F;
+            position: relative;
+        }
+        .ai-box::before {
+            content: 'TARGET ID: SECURED';
+            position: absolute;
+            top: -20px;
+            left: 0;
+            background: #C1121F;
+            color: white;
+            font-size: 10px;
+            padding: 2px 4px;
+            font-family: monospace;
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-white text-raisin font-sans overflow-x-hidden">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

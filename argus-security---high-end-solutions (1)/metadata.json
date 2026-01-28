@@ -1,0 +1,7 @@
+{
+  "name": "ARGUS Security - High-End Solutions",
+  "description": "A high-end corporate security platform for ARGUS Security, featuring physical and electronic surveillance solutions with AI integration.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
